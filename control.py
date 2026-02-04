@@ -5,6 +5,6 @@ import numpy as np
 
 @dataclass
 class Control:
-    accel: np.ndarray  # Raw [ax, ay, az] from BNO085
-    gyro: np.ndarray   # Raw [wx, wy, wz] from BNO085
-    dt: float          # Time since last prediction step
+    accel: np.ndarray  # [ax, ay, az] from BNO085
+    gyro: np.ndarray   # [wx, wy, wz] from BNO085
+    dt: float          # time since last prediction step

@@ -14,14 +14,10 @@ class EKF():
         self.cov = initial_cov 
         
     def predict(self, u: Control):
-
-        # 1. Physics update for x (Non-linear)
-        # 2. Update P using Jacobian F
+        
         pass
 
     def update(self, z: Measurement):
-        # 1. Calculate Innovation y and Jacobian H
-        # 2. Update x and P
         pass
 
     def record(self, timestamp):

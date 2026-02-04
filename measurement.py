@@ -11,6 +11,6 @@ class SensorType(Enum):
 @dataclass
 class Measurement:
     sensor_type: SensorType
-    z: np.ndarray       # The raw sensor vector
-    R: np.ndarray       # The measurement noise (uncertainty) matrix
+    z: np.ndarray       
+    R: np.ndarray       
     timestamp: float

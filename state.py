@@ -9,7 +9,7 @@ class State:
     x: np.ndarray = field(default_factory=lambda: np.zeros(16))
 
     def __post_init__(self):
-        # Orientation must start as a valid identity quaternion (qw=1)
+        # orientation must start as a valid identity quaternion (qw=1)
         self.x[6] = 1.0
 
     # access the state array by name 
@@ -29,11 +29,11 @@ class State:
     def q(self, v): self.x[6:10] = v
 
     @property
-    def bg(self): return self.x[10:13] # Gyro Bias
+    def bg(self): return self.x[10:13] # gyro bias
     @bg.setter
     def bg(self, v): self.x[10:13] = v
 
     @property
-    def ba(self): return self.x[13:16] # Accel Bias
+    def ba(self): return self.x[13:16] # accel bias
     @ba.setter
     def ba(self, v): self.x[13:16] = v
